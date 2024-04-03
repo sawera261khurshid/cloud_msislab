@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-heading {
+    text-align: center;
+    color: #333;
+  }
+
+  .dropdown {
+    margin-top: 20px;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+
+  .dropdown ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .list_items {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .list_items.selected {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  .camera-number {
+    font-weight: bold;
+    color: #000000; /* or your preferred color */
+  }
+
+  .camera-info {
+    font-size: 12px;
+    color: #690606; /* or your preferred color */
+  }
+
+  #buttonsContainer {
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .hidden {
+    display: none;
+}
+
+  #dataTableContainer {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; /* Adjust the max-width as needed */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  #dataTable th:nth-child(3),
+  #dataTable td:nth-child(3) {
+    text-align: center;
+  }
+  
+  #dataTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #dataTable th, #dataTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  #dataTable th {
+    background-color: #99b120;
+    color: white;
+  }
+
+  #dataTable tbody tr {
+    transition: background-color 0.3s;
+  }
+
+  #dataTable tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  #dataTableContainer {
+    display: none;
+  }
+
+  #receivedDataContainer {
+    display: none;
+}
+
+

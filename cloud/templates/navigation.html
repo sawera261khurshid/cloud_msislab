@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <li><a href="#">Factory Sites</a>
+            <ul>
+                <li><a href="{% if user.is_authenticated %}{% url 'incheon-site' %}{% else %}{% url 'login' %}{% endif %}">Incheon</a></li>
+                <li><a href="{% if user.is_authenticated %}{% url 'gwangju-site' %}{% else %}{% url 'login' %}{% endif %}">Gwangju</a></li>
+                <li><a href="{% if user.is_authenticated %}{% url 'pyeongteak-site' %}{% else %}{% url 'login' %}{% endif %}">Pyeongteak</a></li>
+                <li><a href="{% if user.is_authenticated %}{% url 'vitenam' %}{% else %}{% url 'login' %}{% endif %}">Vietnam</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a>
+            <ul>
+                <li><a href="http://www.ket.com/">KET</a></li>
+                <li><a href="https://www.msislab.co.kr/">MSISLAB</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,114 @@
+<!-- 
+<html>
+
+ 
+<head>
+<meta charset="utf-8" />
+<title>Home Page</title>
+<link rel="stylesheet" href="/static/css/temp.css">
+<link rel="stylesheet" href="/static/css/test.css">
+
+</head>
+<body>
+    <p class="dashboard_title"> MSISLAB Cloud based AI Camera <br> Management System </p>
+<nav>
+  <ul>
+    <li><a href="Home">Home</a></li>
+    <li><a href="#">Factory Sites</a>
+      <ul>
+        <li><a href="Incheon">Incheon</a></li>
+        <li><a href="Gwangju">Gwangju</a></li>
+        <li><a href="Pyeongteak">Pyeongteak</a></li>
+        <li><a href="Vitenam">Vitenam</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contact</a>
+      <ul>
+        <li><a href="http://www.ket.com/">KET</a></li>
+        <li><a href="https://www.msislab.co.kr/">MSISLAB</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Inspiration</a></li>
+  </ul>
+</nav>
+
+</body>
+ 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/css/temp.css">
+    <link rel="stylesheet" href="/static/css/test.css">
+
+    <style>
+        /* Styling for the dashboard title */
+        .dashboard_title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        /* Styling for the message */
+        /* Styling for the message text */
+        .message p {
+            font-size: 18px;
+            color: #378d12;
+            display: inline-block;
+            background-color: #ffffffcb;
+            padding: 10px 20px;
+            border: 1px solid #378d12;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the message link */
+        .message a {
+            color: #378d12;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <p class="dashboard_title"> MSISLAB Cloud based AI Camera <br> Management System </p>
+        <ul>
+            <!-- <li><a href="{% if user.is_authenticated %}{% url 'home' %}{% else %}{% url 'login' %}{% endif %}">Home</a></li> -->
+            <li><a href="#">Factory Sites</a>
+                <ul>
+                    <li><a href="{% if user.is_authenticated %}{% url 'incheon-site' %}{% else %}{% url 'login' %}{% endif %}">Incheon</a></li>
+                    <li><a href="{% if user.is_authenticated %}{% url 'gwangju-site' %}{% else %}{% url 'login' %}{% endif %}">Gwangju</a></li>
+                    <li><a href="{% if user.is_authenticated %}{% url 'pyeongteak-site' %}{% else %}{% url 'login' %}{% endif %}">Pyeongteak</a></li>
+                    <li><a href="{% if user.is_authenticated %}{% url 'vitenam' %}{% else %}{% url 'login' %}{% endif %}">Vietnam</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a>
+                <ul>
+                    <li><a href="http://www.ket.com/">KET</a></li>
+                    <li><a href="https://www.msislab.co.kr/">MSISLAB</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="message" style="text-align: center;">
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}! (<a href="{% url 'logout' %}">Logout</a>)</p>
+        {% else %}
+            <p>You are not logged in. (<a href="{% url 'login' %}">Login</a>)</p>
+        {% endif %}
+    </div>
+</body>
+</html>
